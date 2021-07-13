@@ -1,38 +1,60 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home {
+  padding: 6rem;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 6rem;
+}
+.tic {
+  display: inline-grid;
+  grid-row: 3;
+  gap: 0.3rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.home .draw .each {
+  background-color: rgb(41, 40, 40);
+}
+.tic .each {
+  width: 5rem;
+  height: 5rem;
+  background-color: black;
+  text-align: center;
+  color: yellow;
+  font-size: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.tic .winner {
+  background-color: green;
 }
+.output-console > button {
+  background-color: black;
+  color: yellow;
+  padding: 0.5rem 1.5rem;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border-radius: 0.25rem;
+  font-size: large;
+}
+.output-console {
+  text-align: center;
+  width: 20rem;
+}
+.output-console .console {
+  margin-top: 2rem;
+  background-color: black;
+  color: yellow;
+  height: 10rem;
+  text-align: left;
+  padding: 0.5rem;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+  scroll-behavior: smooth;
+}
+.console > p {
+  margin: 0;
+  margin-top: 0.3rem;
 }
